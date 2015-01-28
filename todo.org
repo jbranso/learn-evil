@@ -1,0 +1,38 @@
+#+STARTUP: showeverything
+This file contains a list of open bugs that need work.
+
+* The preview area should visually show how the hjkl keys move the blue box.
+  
+* rewrite ^ and $ to teleport the blue box. Currently, the blue box just
+  slides accross the screen. If it hits something it stops there.
+  
+* make the score persistant after the user dies. Currently, when the user dies
+  the score goes to 0.
+  
+** as the score increases, make the blocks fall faster. and possibly more block to fall.
+   
+* suppose the user's score is 3. If the user presses n, his score is still 3. It should be
+  set back to 5.
+  
+* The game randomly kills the user, and I'm not sure why.
+  
+* One cannot properly quit the game by pressing q.
+  
+* When the game ends after the user has lost of of his lives,
+  an error appears that says, error running timer, learn-evil-update-game void variable
+  learn-evil-score-file whatever that means.
+  
+* As a vertical red log falls a user can get points by pressing x or X to delete it.
+  
+* Explain movements over time. Perhaps, pause the game, tell the user what to do, and
+  temporarily suspend gravity, and let only the user's blue box move.
+  
+* When the program starts, display the options for the user:
+  Would you like to learn: vim commands emacs commands god-mode commands dired commands etc.  he or she can
+  then decide what he or she wants to play.  * Here is an overview of how the game works: * reset everything
+  (learn-evil-reset-game) * use learn-evil-mode-map * set the period (how quickly the blocks fall or the
+  clock tick length) * every period of seconds, update the game (lean-evil-update-game) ** error checking **
+  erase all shapes (learn-evil-erase-shape) ** move all red logs down one ** hit ==
+  (learn-evil-test-shape) ** if hit then draw the shape, don't move it.  ** if not hit then
+  (learn-evil-shape-done) *** move the peice down *** update the score *** (learn-evil-new-shape)
+  (learn-evil-draw-shape learn-evil-player-shape)
